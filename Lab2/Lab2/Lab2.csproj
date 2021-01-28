@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="C:\Users\12165\Documents\ASP.net\Lab2\Index.cshtml" Link="Index.cshtml" />
+  </ItemGroup>
+
+</Project>
