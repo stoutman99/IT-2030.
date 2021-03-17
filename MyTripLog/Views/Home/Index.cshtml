@@ -1,0 +1,42 @@
+﻿@model List<Trip>
+
+@{
+    ViewData["Title"] = "My Trip Log";
+}
+
+<h2>Trip List</h2>
+
+<a asp-controller="Trip" asp-action="Add">Add New Trip</a>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Accomodations</th>
+            <th>Things to do</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Trip trip in Model)
+        {
+            <tr>
+                <td>@trip.Destination</td>
+                <td>@trip.Start</td>
+                <td>@trip.End</td>
+                <td>@trip.Accomodations</td>
+                <td>@trip.Todo</td>
+                <td>
+                    <a asp-controller="Trip" asp-action="Edit"
+                       asp-route-id="@trip.TripId">Edit</a>
+                    <a asp-controller="Trip" asp-action="Delete"
+                       asp-route-id="@trip.TripId">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
